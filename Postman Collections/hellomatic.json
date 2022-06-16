@@ -1,0 +1,474 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Shopigram 2",
+    "contact": {}
+  },
+  "host": "example.com",
+  "basePath": "/facebook",
+  "securityDefinitions": {},
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/webhook2": {
+      "get": {
+        "summary": "FB Webhook Edited",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "FBWebhookEdited",
+        "deprecated": false,
+        "produces": [
+          "application/json; charset=utf-8"
+        ],
+        "parameters": [],
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/FBWebhookConnect1"
+            },
+            "examples": {
+              "application/json; charset=utf-8": {
+                "status": "OK 1 {{id}}"
+              }
+            },
+            "headers": {
+              "Date": {
+                "type": "string",
+                "default": "Thu, 28 Apr 2022 13:20:56 GMT"
+              },
+              "Transfer-Encoding": {
+                "type": "string",
+                "default": "chunked"
+              },
+              "Connection": {
+                "type": "string",
+                "default": "keep-alive"
+              },
+              "Server": {
+                "type": "string",
+                "default": "nginx"
+              },
+              "x-srv-trace": {
+                "type": "string",
+                "default": "v=1;t=48a6fab8d309cc81"
+              },
+              "x-srv-span": {
+                "type": "string",
+                "default": "v=1;s=89afc6e37c00223b"
+              },
+              "Access-Control-Allow-Origin": {
+                "type": "string",
+                "default": "*"
+              },
+              "X-RateLimit-Limit": {
+                "type": "string",
+                "default": "60"
+              },
+              "X-RateLimit-Remaining": {
+                "type": "string",
+                "default": "59"
+              },
+              "X-RateLimit-Reset": {
+                "type": "string",
+                "default": "1651152115"
+              },
+              "ETag": {
+                "type": "string",
+                "default": "W/\"be-b0hGzNDXKUlj4G0zB55Q7Cs/yTs\""
+              },
+              "Content-Encoding": {
+                "type": "string",
+                "default": "gzip"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/webhook": {
+      "post": {
+        "summary": "Test Facebook Webhook Comment",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "TestFacebookWebhookComment",
+        "deprecated": false,
+        "produces": [
+          "application/json; charset=utf-8"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/TestFacebookWebhookCommentRequest"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/TestFacebookWebhookCopy1"
+            },
+            "examples": {
+              "application/json; charset=utf-8": {
+                "object": "instagram",
+                "entry": [
+                  {
+                    "id": "17841448015137224",
+                    "time": 1651155529,
+                    "changes": [
+                      {
+                        "value": {
+                          "from": {
+                            "id": "4068738133252786",
+                            "username": "jatinparekh93"
+                          },
+                          "media": {
+                            "id": "17931935932964108",
+                            "media_product_type": "FEED"
+                          },
+                          "id": "17937710488955858",
+                          "text": "pp"
+                        },
+                        "field": "comments"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "headers": {
+              "Date": {
+                "type": "string",
+                "default": "Thu, 28 Apr 2022 14:28:16 GMT"
+              },
+              "Transfer-Encoding": {
+                "type": "string",
+                "default": "chunked"
+              },
+              "Connection": {
+                "type": "string",
+                "default": "keep-alive"
+              },
+              "Server": {
+                "type": "string",
+                "default": "nginx"
+              },
+              "x-srv-trace": {
+                "type": "string",
+                "default": "v=1;t=7a879705437fdcd2"
+              },
+              "x-srv-span": {
+                "type": "string",
+                "default": "v=1;s=7b452dc203ad54b1"
+              },
+              "Access-Control-Allow-Origin": {
+                "type": "string",
+                "default": "*"
+              },
+              "X-RateLimit-Limit": {
+                "type": "string",
+                "default": "60"
+              },
+              "X-RateLimit-Remaining": {
+                "type": "string",
+                "default": "59"
+              },
+              "X-RateLimit-Reset": {
+                "type": "string",
+                "default": "1651156155"
+              },
+              "ETag": {
+                "type": "string",
+                "default": "W/\"b0-abtVL6sJUWqYgJpxY0UTj+uBnlg\""
+              },
+              "Content-Encoding": {
+                "type": "string",
+                "default": "gzip"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "FBWebhookConnect1": {
+      "title": "FBWebhookConnect1",
+      "example": {
+        "status": "OK 1 {{id}}"
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status"
+      ]
+    },
+    "TestFacebookWebhookCommentRequest": {
+      "title": "TestFacebookWebhookCommentRequest",
+      "example": {
+        "object": "instagram",
+        "entry": [
+          {
+            "id": "17841448015137224",
+            "time": 1651155529,
+            "changes": [
+              {
+                "value": {
+                  "from": {
+                    "id": "4068738133252786",
+                    "username": "jatinparekh93"
+                  },
+                  "media": {
+                    "id": "17931935932964108",
+                    "media_product_type": "FEED"
+                  },
+                  "id": "17937710488955858",
+                  "text": "pp"
+                },
+                "field": "comments"
+              }
+            ]
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "object": {
+          "type": "string"
+        },
+        "entry": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Entry"
+          }
+        }
+      },
+      "required": [
+        "object",
+        "entry"
+      ]
+    },
+    "Entry": {
+      "title": "Entry",
+      "example": {
+        "id": "17841448015137224",
+        "time": 1651155529,
+        "changes": [
+          {
+            "value": {
+              "from": {
+                "id": "4068738133252786",
+                "username": "jatinparekh93"
+              },
+              "media": {
+                "id": "17931935932964108",
+                "media_product_type": "FEED"
+              },
+              "id": "17937710488955858",
+              "text": "pp"
+            },
+            "field": "comments"
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "time": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "changes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Change"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "time",
+        "changes"
+      ]
+    },
+    "Change": {
+      "title": "Change",
+      "example": {
+        "value": {
+          "from": {
+            "id": "4068738133252786",
+            "username": "jatinparekh93"
+          },
+          "media": {
+            "id": "17931935932964108",
+            "media_product_type": "FEED"
+          },
+          "id": "17937710488955858",
+          "text": "pp"
+        },
+        "field": "comments"
+      },
+      "type": "object",
+      "properties": {
+        "value": {
+          "$ref": "#/definitions/Value"
+        },
+        "field": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "field"
+      ]
+    },
+    "Value": {
+      "title": "Value",
+      "example": {
+        "from": {
+          "id": "4068738133252786",
+          "username": "jatinparekh93"
+        },
+        "media": {
+          "id": "17931935932964108",
+          "media_product_type": "FEED"
+        },
+        "id": "17937710488955858",
+        "text": "pp"
+      },
+      "type": "object",
+      "properties": {
+        "from": {
+          "$ref": "#/definitions/From"
+        },
+        "media": {
+          "$ref": "#/definitions/Media"
+        },
+        "id": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "from",
+        "media",
+        "id",
+        "text"
+      ]
+    },
+    "From": {
+      "title": "From",
+      "example": {
+        "id": "4068738133252786",
+        "username": "jatinparekh93"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "username"
+      ]
+    },
+    "Media": {
+      "title": "Media",
+      "example": {
+        "id": "17931935932964108",
+        "media_product_type": "FEED"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "media_product_type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "media_product_type"
+      ]
+    },
+    "TestFacebookWebhookCopy1": {
+      "title": "TestFacebookWebhookCopy1",
+      "example": {
+        "object": "instagram",
+        "entry": [
+          {
+            "id": "17841448015137224",
+            "time": 1651155529,
+            "changes": [
+              {
+                "value": {
+                  "from": {
+                    "id": "4068738133252786",
+                    "username": "jatinparekh93"
+                  },
+                  "media": {
+                    "id": "17931935932964108",
+                    "media_product_type": "FEED"
+                  },
+                  "id": "17937710488955858",
+                  "text": "pp"
+                },
+                "field": "comments"
+              }
+            ]
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "object": {
+          "type": "string"
+        },
+        "entry": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Entry"
+          }
+        }
+      },
+      "required": [
+        "object",
+        "entry"
+      ]
+    }
+  },
+  "tags": [
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ]
+}
