@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "1eb5ab8e-b89d-4c53-ad79-89b609db3875",
+		"name": "Shopigram",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FB Webhook Connect",
+			"_postman_id": "4aacb1d2-62ca-4fad-8359-89ccd67a8a1b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}/facebook/webhook"
+			},
+			"response": [
+				{
+					"id": "bffe9cc4-20d5-4b90-93c6-3a529b06c89e",
+					"name": "FB Webhook Connect",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/facebook/webhook?id=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"facebook",
+								"webhook"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 28 Apr 2022 13:20:56 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=48a6fab8d309cc81"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=89afc6e37c00223b"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1651152115"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"be-b0hGzNDXKUlj4G0zB55Q7Cs/yTs\""
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"status\": \"OK 1 {{id}}\"\n}"
+				},
+				{
+					"id": "9aaece55-7708-4205-925d-d0243e078898",
+					"name": "FB Webhook Connect",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/facebook/webhook?id=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"facebook",
+								"webhook"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 28 Apr 2022 14:11:48 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=48a6fab8d309cc81"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=89afc6e37c00223b"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1651152115"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"be-b0hGzNDXKUlj4G0zB55Q7Cs/yTs\""
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"status\": \"OK 2 {{$url}}\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Test Facebook Webhook Comment",
+			"_postman_id": "fc619808-691e-40ae-80e9-9c16482cda58",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"object\": \"instagram\",\n    \"entry\": [\n        {\n            \"id\": \"17841448015137224\",\n            \"time\": 1651155529,\n            \"changes\": [\n                {\n                    \"value\": {\n                        \"from\": {\n                            \"id\": \"4068738133252786\",\n                            \"username\": \"jatinparekh93\"\n                        },\n                        \"media\": {\n                            \"id\": \"17931935932964108\",\n                            \"media_product_type\": \"FEED\"\n                        },\n                        \"id\": \"17937710488955858\",\n                        \"text\": \"pp\"\n                    },\n                    \"field\": \"comments\"\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/facebook/webhook"
+			},
+			"response": [
+				{
+					"id": "b2558b36-f47c-4dfb-9a29-661c7448ee94",
+					"name": "Test Facebook Webhook Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"object\": \"instagram\",\n    \"entry\": [\n        {\n            \"id\": \"17841448015137224\",\n            \"time\": 1651155529,\n            \"changes\": [\n                {\n                    \"value\": {\n                        \"from\": {\n                            \"id\": \"4068738133252786\",\n                            \"username\": \"jatinparekh93\"\n                        },\n                        \"media\": {\n                            \"id\": \"17931935932964108\",\n                            \"media_product_type\": \"FEED\"\n                        },\n                        \"id\": \"17937710488955858\",\n                        \"text\": \"pp\"\n                    },\n                    \"field\": \"comments\"\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/facebook/webhook"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 28 Apr 2022 14:28:16 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=7a879705437fdcd2"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=7b452dc203ad54b1"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1651156155"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b0-abtVL6sJUWqYgJpxY0UTj+uBnlg\""
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"object\": \"instagram\",\n    \"entry\": [\n        {\n            \"id\": \"17841448015137224\",\n            \"time\": 1651155529,\n            \"changes\": [\n                {\n                    \"value\": {\n                        \"from\": {\n                            \"id\": \"4068738133252786\",\n                            \"username\": \"jatinparekh93\"\n                        },\n                        \"media\": {\n                            \"id\": \"17931935932964108\",\n                            \"media_product_type\": \"FEED\"\n                        },\n                        \"id\": \"17937710488955858\",\n                        \"text\": \"pp\"\n                    },\n                    \"field\": \"comments\"\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
