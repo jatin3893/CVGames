@@ -7,14 +7,14 @@
 	"item": [
 		{
 			"name": "FB Webhook",
-			"_postman_id": "4aacb1d2-62ca-4fad-8359-89ccd67a8a1b",
+			"id": "4aacb1d2-62ca-4fad-8359-89ccd67a8a1b",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{url}}/facebook/web2"
+				"url": "{{url}}/facebook/web3"
 			},
 			"response": []
 		}
