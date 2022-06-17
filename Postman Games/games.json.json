@@ -14,7 +14,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{url}}/facebook/web3"
+				"url": "{{url}}/facebook/webworks"
 			},
 			"response": []
 		}
